@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "e5987de4-9639-47b3-a580-ae25e5613173",
+		"name": "ProductsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Select all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiEndpoint}}/products",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Select active products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiEndpoint}}/products/active",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"products",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Select one product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiEndpoint}}/products/1",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"productName\": \"Mushrooms\",\r\n    \"supplierId\": 6,\r\n    \"categoryId\": 7, \r\n    \"quantityPerUnit\": \"1 kg pkg.\",\r\n    \"unitPrice\": 9.99,\r\n    \"unitsInStock\": 10,\r\n    \"unitsOnOrder\": 4,\r\n    \"reorderLevel\": 1,\r\n    \"discontinued\": false\r\n}"
+				},
+				"url": {
+					"raw": "{{apiEndpoint}}/products",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{apiEndpoint}}/products/88",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"products",
+						"88"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"productName\": \"Mushrooms111\",\r\n    \"supplierId\": 6,\r\n    \"categoryId\": 7, \r\n    \"quantityPerUnit\": \"1 kg pkg.\",\r\n    \"unitPrice\": 9.99,\r\n    \"unitsInStock\": 10,\r\n    \"unitsOnOrder\": 4,\r\n    \"reorderLevel\": 1,\r\n    \"discontinued\": false\r\n}"
+				},
+				"url": {
+					"raw": "{{apiEndpoint}}/products/101",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"products",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "117b8bd0-fcb0-45ff-a4a4-78e29732a77f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "12a8740b-943e-4af2-b860-7a706df65e53",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9f37413a-53d8-4e18-9e59-3e9d8793cd3e",
+			"key": "apiEndpoint",
+			"value": "https://localhost:5001/api",
+			"type": "string"
+		}
+	]
+}
